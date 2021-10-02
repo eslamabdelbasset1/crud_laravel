@@ -16,7 +16,6 @@
 
         <form action="{{url('/categories')}}" method="POST" >
             @csrf
-
             <div class="form-group w-50 m-auto border">
                 <div class="mb-3 p-2">
                     <label for="exampleFormControlInput1" class="form-label">Name Category</label>

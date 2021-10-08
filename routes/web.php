@@ -24,3 +24,8 @@ Route::get('/categories/{id}',[\App\Http\Controllers\CatController::class, 'show
 
 
 Route::post('/categories',[\App\Http\Controllers\CatController::class, 'store']);
+
+Route::get('/categories/{id}/edit',[\App\Http\Controllers\CatController::class, 'edit']);
+Route::put('/categories/{id}',[\App\Http\Controllers\CatController::class, 'update']);
+
+Route::delete('/categories/{id}',[\App\Http\Controllers\CatController::class, 'destroy']);

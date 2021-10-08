@@ -1,15 +1,21 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Show Category - {{$cats->name}}</title>
-    </head>
-    <body>
+@extends('layout')
+
+@section('title', "Show Category - $cats->name")
+
+@section('content')
+    <div class="container mt-5">
         <h1>Show Category </h1>
         <h3>{{$cats->name}}</h3>
         <p>{{$cats->desc}}</p>
-    </body>
-</html>
+
+        <a href="{{url("categories/cats->id/edit")}}">Edit</a>
+        <form action="{{url("categories/cats->id")}}" method="post"><br>
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Delete">
+
+        </form>
+    </div>
+
+@endsection
+
